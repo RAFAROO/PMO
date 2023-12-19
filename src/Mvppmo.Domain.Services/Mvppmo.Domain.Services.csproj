@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Mvppmo.Domain.Services</RootNamespace>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JHipsterNet.Core" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="LanguageExt.Core" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Mvppmo.Infrastructure\Mvppmo.Infrastructure.csproj" />
+        <ProjectReference Include="..\Mvppmo.Domain\Mvppmo.Domain.csproj" />
+        <ProjectReference Include="..\Mvppmo.Crosscutting\Mvppmo.Crosscutting.csproj" />
+    </ItemGroup>
+
+</Project>

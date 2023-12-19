@@ -1,0 +1,22 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+name: mvppmo
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: Dockerfile-Back
+    ports:
+      - 127.0.0.1:5000:80
+    depends_on:
+      mssql:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+  mssql:
+    extends:
+      file: ./mssql.yml
+      service: mssql
+  keycloak:
+    extends:
+      file: ./keycloak.yml
+      service: keycloak

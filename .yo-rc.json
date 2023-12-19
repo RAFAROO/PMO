@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "oauth2",
+    "baseName": "mvppmo",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-dotnetcore",
+        "version": "4.0.0"
+      }
+    ],
+    "clientFramework": "react",
+    "clientTestFrameworks": [],
+    "clientTheme": "none",
+    "cqrsEnabled": true,
+    "creationTimestamp": 1703018254189,
+    "databaseType": "mssql",
+    "devServerPort": 9060,
+    "enableTranslation": false,
+    "entities": [],
+    "jhipsterVersion": "8.0.0",
+    "jwtSecretKey": "YjMyMGI5ZDZkN2QxNjAzZjc3ZDc3Y2RmOTQzMDc2YmY2YWMxMThiZTY4YmJlOTU0YjE0MDAxZDEzYjk0MjA2OGY3Y2QyOGEyYTM4NGZmYzM2ODE1Y2IxODI5MWNlMzM4YWRiZQ==",
+    "microfrontend": null,
+    "microfrontends": [],
+    "namespace": "Mvppmo",
+    "nativeLanguage": "es",
+    "serverPort": "5000",
+    "testFrameworks": [],
+    "withAdminUi": true,
+    "withTerraformAzureScripts": false
+  }
+}
