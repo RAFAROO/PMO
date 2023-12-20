@@ -1,16 +1,18 @@
-using System;
-using Mvppmo.Infrastructure.Data;
-using Mvppmo.Configuration;
-using Mvppmo.Infrastructure.Configuration;
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this
+
+using MediatR;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using MediatR;
+using Microsoft.IdentityModel.Logging;
 using Mvppmo.Application;
+using Mvppmo.Configuration;
+using Mvppmo.Infrastructure.Configuration;
+using System;
 
 [assembly: ApiController]
 
@@ -30,7 +32,7 @@ public class Startup : IStartup
     public virtual void ConfigureServices(IServiceCollection services, IHostEnvironment environment)
     {
         services.AddMediatR(typeof(ApplicationClassesAssemblyHelper));
-
+        IdentityModelEventSource.ShowPII = true;
         services
             .AddSecurityModule()
             .AddProblemDetailsModule(environment)
